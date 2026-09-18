@@ -17,4 +17,967 @@
 
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
+  <body>
+    <div class="global-abyss-bg" aria-hidden="true">
+      <div class="global-bg-veil"></div>
+    </div>
+
+    <!-- Overlays fixos de atmosfera: ruído SVG e scanlines horizontais -->
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="noise-layer" aria-hidden="true"></div>
+
+    <!-- Header & Navegação Fixa -->
+    <header class="site-header">
+      <div class="nav-container">
+        <a
+          href="#inicio"
+          class="brand-link"
+          aria-label="SOMA Abyssal Archive Início"
+        >
+          <div class="brand-logo-wrap">
+            <span class="soma-wordmark"
+              >S<span class="porthole-o"></span>MA</span
+            >
+            <span class="brand-submark">// AA</span>
+          </div>
+          <div class="nav-status">
+            <span class="pulse-dot"></span>
+            <span>SINAL RECUPERADO // PATHOS-II</span>
+          </div>
+        </a>
+
+        <button
+          class="mobile-menu-btn"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          MENU //
+        </button>
+
+        <nav aria-label="Navegação Principal">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#arquivo">01 Arquivo</a></li>
+            <li><a href="#curiosidades">02 Fatos</a></li>
+            <li><a href="#historia">03 História</a></li>
+            <li><a href="#ambientacao">04 Instalação</a></li>
+            <li><a href="#personagens">05 Sujeitos</a></li>
+            <li><a href="#criaturas">06 Ameaças</a></li>
+            <li><a href="#temas">07 Filosofia</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="inicio">
+        <!-- Screenshot real de gameplay do fundo do oceano (Submersível) -->
+        <div class="hero-bg-layer" aria-hidden="true">
+          <img
+            src="https://cdn.britannica.com/56/285556-050-38678A9B/SOMA-video-game-screenshot-submersible.jpg"
+            alt=""
+            class="hero-bg-img"
+            loading="lazy"
+          />
+          <div class="hero-bg-overlay"></div>
+        </div>
+
+        <div class="hero-container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div style="margin-bottom: 1rem">
+                <span class="eyebrow">
+                  <span class="pulse-dot"></span>
+                  <span>SINAL RECUPERADO // PATHOS-II</span>
+                </span>
+              </div>
+              <div class="hero-wordmark-row">
+                <span class="soma-wordmark"
+                  >S<span class="porthole-o"></span>MA</span
+                >
+              </div>
+              <h1 class="hero-title" data-glitch="O MEDO&#10;TEM MEMÓRIA.">
+                O medo<br />
+                <span class="italic-cyan">tem memória.</span>
+              </h1>
+              <p class="hero-subtitle">
+                Um arquivo visual sobre o abismo, a consciência e as perguntas
+                que continuam respirando depois que as luzes se apagam.
+              </p>
+              <div class="hero-actions">
+                <a href="#arquivo" class="btn-abyss">INICIAR EXPLORAÇÃO ↘</a>
+                <a href="#arquivo" class="scroll-hint">ROLE PARA DESCER ↓</a>
+              </div>
+            </div>
+
+            <div class="orb-stage" aria-hidden="true">
+              <div class="orb-container">
+                <div class="orbital-ring ring-1"></div>
+                <div class="orbital-ring ring-2"></div>
+                <div class="orbital-ring ring-3"></div>
+                <div class="orb-core"></div>
+                <div class="orb-labels">
+                  <span>DEPTH // UNKNOWN</span>
+                  <span>NO SIGNAL / NO RETURN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 / ARQUIVO (Introdução) -->
+      <section class="abyss-section" id="arquivo">
+        <div class="content-box">
+          <div class="reveal section-intro-scrim">
+            <span class="eyebrow section-index-badge">
+              <span class="hud-indicator"
+                ><span class="pulse-dot"></span><span class="hud-bar"></span
+              ></span>
+              01 // ARQUIVO GERAL
+            </span>
+            <h2 class="section-title">A descida ao silêncio.</h2>
+            <p class="section-desc">
+              SOMA é um horror de ficção científica em primeira pessoa lançado
+              em 22 de setembro de 2015 pela produtora sueca Frictional Games —
+              os célebres criadores de Amnesia: The Dark Descent e Penumbra.
+            </p>
+          </div>
+
+          <div class="archive-grid reveal">
+            <div class="archive-body">
+              <p>
+                Originalmente lançado para PC e PlayStation 4 (com chegada
+                posterior ao Xbox One em 2017), o título se distancia da ação
+                armamentista comum do gênero. Aqui, a sobrevivência depende
+                inteiramente de perspicácia, observação minuciosa e estômago
+                para suportar o isolamento das profundezas.
+              </p>
+              <p>
+                A experiência desdobra-se através da exploração de corredores
+                claustrofóbicos, interfaces de computador antiquadas, gravações
+                fragmentadas e anotações científicas de tripulantes que tentaram
+                compreender o impossível. Não há combate direto: o confronto com
+                o abismo é puramente psicológico e conceitual.
+              </p>
+
+              <!-- Capa Oficial Frictional Games emoldurada -->
+              <div class="archive-media-box">
+                <img
+                  src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/header.jpg"
+                  alt="Capa oficial SOMA Frictional Games"
+                  loading="lazy"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/library_hero_2x.jpg';
+                  "
+                />
+                <div class="archive-caption">
+                  <span
+                    >REGISTRO DE ARQUIVO // COVER ART © FRICTIONAL GAMES</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <aside class="terminal-window">
+              <div class="terminal-titlebar">
+                <span>[ PATHOS-II // TERMINAL 01 ]</span>
+                <div class="terminal-controls">
+                  <span class="terminal-led active"></span>
+                  <span class="terminal-led"></span>
+                  <span class="terminal-led amber"></span>
+                </div>
+              </div>
+              <div class="terminal-body">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    border-bottom: 1px solid var(--border);
+                    padding-bottom: 0.5rem;
+                  "
+                >
+                  <span class="status-tag">LEITURA SEGURA</span>
+                  <span style="font-size: 0.75rem; color: var(--text-muted)"
+                    >CANAL // #001</span
+                  >
+                </div>
+                <p style="margin: 0 0 1rem; color: #ffffff; font-weight: 700">
+                  DIRETRIZ DE ACESSO: SEM SPOILERS
+                </p>
+                <p style="margin: 0 0 1.2rem">
+                  Visão geral concebida para quem ainda não jogou. Toda a
+                  experiência narrativa permanece intacta para sua própria
+                  imersão nas fossas oceânicas da PATHOS-II.<span
+                    class="terminal-cursor"
+                  ></span>
+                </p>
+                <div class="meter-container">
+                  <div class="meter-label">
+                    <span>ESTABILIDADE DA SESSÃO</span>
+                    <span style="color: var(--accent)">100% PURA</span>
+                  </div>
+                  <div class="meter-bar">
+                    <div class="meter-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 / CURIOSIDADES -->
+      <section class="abyss-section" id="curiosidades">
+        <div class="content-box">
+          <div class="reveal section-intro-scrim">
+            <span class="eyebrow section-index-badge">
+              <span class="hud-indicator"
+                ><span class="pulse-dot"></span><span class="hud-bar"></span
+              ></span>
+              02 // REGISTROS CONFIDENCIAIS
+            </span>
+            <h2 class="section-title">Curiosidades de produção</h2>
+            <p class="section-desc">
+              Fatos e marcos técnicos por trás da criação da obra-prima
+              subaquática da Frictional Games.
+            </p>
+          </div>
+
+          <!-- Hero Capsule Oficial Frictional Games -->
+          <div
+            class="archive-media-box reveal"
+            style="max-width: 900px; margin: 0 auto 2.5rem"
+          >
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/d097412c9c3bb6074bd01274150a61f3e91cb54e/hero_capsule_2x.jpg"
+              alt="SOMA Hero Capsule - Cenas subaquáticas da PATHOS-II"
+              loading="lazy"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/library_hero_2x.jpg';
+              "
+            />
+            <div class="archive-caption">
+              <span
+                >REGISTRO DE ARQUIVO // HERO CAPSULE — FRICTIONAL GAMES</span
+              >
+            </div>
+          </div>
+
+          <div class="records-grid">
+            <article class="record-card reveal">
+              <div class="record-num">
+                <span class="record-num-tag">REG // 01</span>
+              </div>
+              <p>
+                <strong>Etimologia:</strong> O nome "SOMA" vem do grego clássico
+                <em>σῶμα</em>, que significa "corpo" — um prenúncio provocador
+                ao dilema do dualismo cartesiano mente-corpo que perfura toda a
+                jornada.
+              </p>
+            </article>
+
+            <article class="record-card reveal">
+              <div class="record-num">
+                <span class="record-num-tag">REG // 02</span>
+              </div>
+              <p>
+                <strong>Tecnologia HPL3:</strong> Oficialmente anunciado ao
+                público em outubro de 2013, o game foi forjado na HPL Engine 3,
+                motor gráfico e físico proprietário da Frictional com
+                manipulação detalhada de objetos táteis.
+              </p>
+            </article>
+
+            <article class="record-card reveal">
+              <div class="record-num">
+                <span class="record-num-tag">REG // 03</span>
+              </div>
+              <p>
+                <strong>Safe Mode oficial:</strong> Em dezembro de 2017, os
+                desenvolvedores lançaram uma atualização com o "Safe Mode",
+                tornando as criaturas pacíficas para jogadores que desejam focar
+                estritamente no enredo e na atmosfera.
+              </p>
+            </article>
+
+            <article class="record-card reveal">
+              <div class="record-num">
+                <span class="record-num-tag">REG // 04</span>
+              </div>
+              <p>
+                <strong>Paisagem Sonora:</strong> A aclamada trilha sonora é
+                assinada pelo finlandês Mikko Tarmia, tecendo drones acústicos
+                abissais, rangidos de pressão de casco e texturas industriais
+                que aceleram o pulso.
+              </p>
+            </article>
+
+            <article class="record-card reveal">
+              <div class="record-num">
+                <span class="record-num-tag">REG // 05</span>
+              </div>
+              <p>
+                <strong>Vozes de Destaque:</strong> Simon Jarrett ganha vida
+                pela voz do ator britânico Jonathan Aris (Sherlock), enquanto
+                Catherine Chun é interpretada com maestria pragmática por
+                Courtenay Taylor (Fallout 4).
+              </p>
+            </article>
+
+            <article class="record-card reveal">
+              <div class="record-num">
+                <span class="record-num-tag">REG // 06</span>
+              </div>
+              <p>
+                <strong>O Dilema da Moeda:</strong> O jogo originou intensas
+                discussões filosóficas na internet a respeito do infame "coin
+                toss" da consciência — sem revelar o desfecho, é um dos finais
+                mais debatidos na história recente dos games.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 / HISTÓRIA -->
+      <section class="abyss-section" id="historia">
+        <div class="content-box">
+          <div class="reveal section-intro-scrim">
+            <span class="eyebrow section-index-badge">
+              <span class="hud-indicator"
+                ><span class="pulse-dot"></span><span class="hud-bar"></span
+              ></span>
+              03 // DIÁRIO DE EVENTOS
+            </span>
+            <h2 class="section-title">A fratura na linha do tempo</h2>
+            <p class="section-desc">
+              Uma sinopse segura do ponto de partida da narrativa, sem
+              comprometer suas surpresas.
+            </p>
+          </div>
+
+          <!-- Frame do Story Trailer -->
+          <div class="archive-media-box reveal" style="margin-bottom: 2.2rem">
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/256654845/movie_full.jpg"
+              alt="SOMA Story Trailer frame"
+              loading="lazy"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/library_hero_2x.jpg';
+              "
+            />
+            <div class="archive-caption">
+              <span
+                >REGISTRO DE ARQUIVO // STORY TRAILER — DESPERTAR NA INSTALAÇÃO
+                SUBMERSA</span
+              >
+            </div>
+          </div>
+
+          <div class="terminal-window story-terminal reveal">
+            <div class="terminal-titlebar">
+              <span>[ PATHOS-II // TERMINAL 03 — NARRATIVE LOG ]</span>
+              <div class="terminal-controls">
+                <span class="terminal-led active"></span>
+                <span class="terminal-led active"></span>
+                <span class="terminal-led"></span>
+              </div>
+            </div>
+            <div class="terminal-body">
+              <div class="story-text-block">
+                <p>
+                  No ano de 2015, o canadense
+                  <strong>Simon Jarrett</strong> sofre um violento acidente de
+                  carro em Toronto que resulta em severo dano cerebral
+                  permanente. Em busca de esperança, ele concorda em se submeter
+                  a um procedimento experimental de escaneamento neural
+                  tridimensional conduzido pelo pesquisador David Munshi.
+                </p>
+                <p>
+                  Ao sentar-se na cadeira clínica e fechar os olhos durante o
+                  feixe do escâner, Simon reabre a visão não mais no
+                  consultório, mas dentro da <strong>PATHOS-II</strong> no ano
+                  de 2104. A imensa estação de pesquisa repousa silenciosa,
+                  imersa nas profundezas impenetráveis do Oceano Atlântico.
+                </p>
+                <p>
+                  Os corredores estão escuros, vazios de vida humana óbvia e
+                  infestados por máquinas que demonstram estranhas manifestações
+                  de personalidade e dor. Guiado remotamente pelo rádio pela
+                  cientista <strong>Catherine Chun</strong> e vigiado de perto
+                  por uma onipresença conhecida apenas como
+                  <strong>WAU</strong>, Simon inicia uma descida desesperada
+                  rumo às fossas mais fundas do planeta.<span
+                    class="terminal-cursor"
+                  ></span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alerta Spoiler com Faixa de Perigo Âmbar/Preta -->
+          <div class="hazard-box reveal">
+            <div class="hazard-strip"></div>
+            <div class="hazard-inner">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 0.6rem;
+                  flex-wrap: wrap;
+                "
+              >
+                <span class="hazard-tag">AVISO INDUSTRIAL</span>
+                <span
+                  >SPOILER-FREE // A rota e a reviravolta final pertencem
+                  unicamente ao jogador.</span
+                >
+              </div>
+              <span
+                class="status-tag"
+                style="
+                  border-color: rgba(217, 158, 74, 0.4);
+                  color: var(--amber);
+                "
+                >INTEGRIDADE PRESERVADA</span
+              >
+            </div>
+            <div class="hazard-strip"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 / AMBIENTAÇÃO -->
+      <section class="abyss-section" id="ambientacao">
+        <div class="content-box">
+          <div class="reveal section-intro-scrim">
+            <span class="eyebrow section-index-badge">
+              <span class="hud-indicator"
+                ><span class="pulse-dot"></span><span class="hud-bar"></span
+              ></span>
+              04 // COMPLEXO SUBMERSO
+            </span>
+            <h2 class="section-title">A arquitetura da PATHOS-II</h2>
+            <p class="section-desc">
+              Instalada no leito rochoso do Oceano Atlântico e dividida em
+              setores batizados com o alfabeto grego, a estação tornou-se o
+              último santuário da Terra após o cataclismo do cometa Telos em
+              2103.
+            </p>
+          </div>
+
+          <!-- Frame do Environments Trailer -->
+          <div class="archive-media-box reveal" style="margin-bottom: 2rem">
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/256656316/movie_full.jpg"
+              alt="SOMA Environments Trailer - underwater facility"
+              loading="lazy"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/library_hero_2x.jpg';
+              "
+            />
+            <div class="archive-caption">
+              <span
+                >REGISTRO DE ARQUIVO // ENVIRONMENTS TRAILER — COMPLEXOS
+                ABISSAIS DA PATHOS-II</span
+              >
+            </div>
+          </div>
+
+          <div class="station-list reveal">
+            <div class="station-badge"><span>Υ</span> UPSILON // GERAÇÃO</div>
+            <div class="station-badge"><span>Λ</span> LAMBDA // TRANSPORTE</div>
+            <div class="station-badge"><span>Δ</span> DELTA // SUBMARINOS</div>
+            <div class="station-badge"><span>Θ</span> THETA // RESIDENCIAL</div>
+            <div class="station-badge"><span>Ο</span> OMICRON // PESQUISA</div>
+            <div class="station-badge"><span>Α</span> ALPHA // NÚCLEO WAU</div>
+            <div class="station-badge"><span>Τ</span> TAU // FOSSA ABISSAL</div>
+            <div class="station-badge"><span>Φ</span> PHI // CANHÃO ÔMEGA</div>
+          </div>
+
+          <div class="atmosphere-cards">
+            <div class="atmo-card atmo-ocean reveal">
+              <span class="atmo-tag">PRESSÃO FÍSICA</span>
+              <h3 class="atmo-title">Oceano</h3>
+              <p class="atmo-desc">
+                O espaço submarino não é um mero cenário: é um personagem
+                hostil. A água gelada transforma cada metro de distância em
+                toneladas de compressão e isolamento palpável.
+              </p>
+            </div>
+
+            <div class="atmo-card atmo-machine reveal">
+              <span class="atmo-tag">BIOMECÂNICA</span>
+              <h3 class="atmo-title">Máquina</h3>
+              <p class="atmo-desc">
+                Metal corroído pela salmoura, cabos pulsantes e computadores de
+                tubo compõem uma estética analógica industrial onde a fronteira
+                entre carcaça e organismo apodreceu.
+              </p>
+            </div>
+
+            <div class="atmo-card atmo-signal reveal">
+              <span class="atmo-tag">VESTÍGIOS</span>
+              <h3 class="atmo-title">Sinal</h3>
+              <p class="atmo-desc">
+                Monitores de fósforo verde, gravações corrompidas e estática
+                radiofônica convidam a reconstituir a queda de cada tripulante
+                antes que seu rastro se perdesse na escuridão.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 / PERSONAGENS -->
+      <section class="abyss-section" id="personagens">
+        <div class="content-box">
+          <div class="reveal section-intro-scrim">
+            <span class="eyebrow section-index-badge">
+              <span class="hud-indicator"
+                ><span class="pulse-dot"></span><span class="hud-bar"></span
+              ></span>
+              05 // DOSSIÊ DE SUJEITOS
+            </span>
+            <h2 class="section-title">Índice de Consciências</h2>
+            <p class="section-desc">
+              Selecione uma entrada para consultar o registro arquivado no
+              sistema central.
+            </p>
+          </div>
+
+          <!-- Frame do Launch Trailer -->
+          <div class="archive-media-box reveal" style="margin-bottom: 2.2rem">
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/256656710/movie_full.jpg"
+              alt="SOMA Launch Trailer screenshot"
+              loading="lazy"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/library_hero_2x.jpg';
+              "
+            />
+            <div class="archive-caption">
+              <span
+                >REGISTRO DE ARQUIVO // LAUNCH TRAILER — ENCONTROS NA LINHA DE
+                FRATURA</span
+              >
+            </div>
+          </div>
+
+          <div class="char-layout">
+            <ul
+              class="char-list"
+              role="tablist"
+              aria-label="Lista de personagens da PATHOS-II"
+            >
+              <li>
+                <button
+                  class="char-item-btn is-active"
+                  id="tab-0"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="char-panel"
+                  data-index="0"
+                >
+                  <span class="char-name">[01] Simon Jarrett</span>
+                  <span class="char-role-badge">PROTAGONISTA</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="char-item-btn"
+                  id="tab-1"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="char-panel"
+                  data-index="1"
+                >
+                  <span class="char-name">[02] Catherine Chun</span>
+                  <span class="char-role-badge">CIENTISTA</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="char-item-btn"
+                  id="tab-2"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="char-panel"
+                  data-index="2"
+                >
+                  <span class="char-name">[03] WAU</span>
+                  <span class="char-role-badge">UNIDADE DE GUARDA</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="char-item-btn"
+                  id="tab-3"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="char-panel"
+                  data-index="3"
+                >
+                  <span class="char-name">[04] Vozes Sobreviventes</span>
+                  <span class="char-role-badge">REGISTROS</span>
+                </button>
+              </li>
+            </ul>
+
+            <div
+              class="terminal-window char-detail-panel"
+              id="char-panel"
+              role="tabpanel"
+              aria-live="polite"
+            >
+              <div class="terminal-titlebar">
+                <span>[ PATHOS-II // TERMINAL 05 — CONSCIOUSNESS INDEX ]</span>
+                <div class="terminal-controls">
+                  <span class="terminal-led active"></span>
+                  <span class="terminal-led active"></span>
+                  <span class="terminal-led"></span>
+                </div>
+              </div>
+              <div class="terminal-body">
+                <div class="detail-head">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    <span class="detail-index" id="detailId"
+                      >DOSSIÊ // SUJEITO 01</span
+                    >
+                    <span class="status-tag" id="detailRole">PROTAGONISTA</span>
+                  </div>
+                  <h3 class="detail-title" id="detailName">Simon Jarrett</h3>
+                </div>
+                <p class="detail-desc" id="detailDesc">
+                  Um jovem livreiro de Toronto cuja última memória nítida
+                  remonta ao ano de 2015. Sua perspectiva ingênua, atordoada e
+                  visceralmente humana funciona como a lente primordial através
+                  da qual o jogador tenta processar o horror ontológico do
+                  abismo.
+                </p>
+                <div class="detail-quote" id="detailQuote">
+                  "Eu nem sequer deveria estar aqui embaixo..."
+                </div>
+                <div style="margin-top: 1rem">
+                  <span class="terminal-cursor"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 / CRIATURAS -->
+      <section class="abyss-section" id="criaturas">
+        <div class="content-box">
+          <div class="reveal section-intro-scrim">
+            <span class="eyebrow section-index-badge">
+              <span class="hud-indicator"
+                ><span class="pulse-dot"></span><span class="hud-bar"></span
+              ></span>
+              06 // AMEAÇAS BIOLÓGICAS
+            </span>
+            <h2 class="section-title">Catálogo Parcial de Entidades</h2>
+            <p class="section-desc">
+              Registros visuais desafiados: aproximação altamente
+              desaconselhada.
+            </p>
+          </div>
+
+          <!-- Destaque: Imagem Real da Criatura Flesher (Wiki) + Creature Trailer -->
+          <div class="archive-media-box reveal" style="margin-bottom: 2rem">
+            <img
+              src="https://static.wikia.nocookie.net/soma/images/7/71/Flesher_Female.webp/revision/latest?cb=20230311214150"
+              alt="Flesher creature in SOMA"
+              loading="lazy"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/library_hero_2x.jpg';
+              "
+            />
+            <div class="archive-caption">
+              <span
+                >REGISTRO DE ARQUIVO // FLESHER // REGISTRO DA ESTAÇÃO
+                LAMBDA</span
+              >
+            </div>
+          </div>
+
+          <div class="archive-media-box reveal" style="margin-bottom: 2.5rem">
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/256654846/movie_full.jpg"
+              alt="SOMA Creature Trailer screenshot"
+              loading="lazy"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/282140/library_hero_2x.jpg';
+              "
+            />
+            <div class="archive-caption">
+              <span
+                >REGISTRO DE ARQUIVO // CREATURE TRAILER — ENTIDADE BIOMECÂNICA
+                EM PATRULHA</span
+              >
+            </div>
+          </div>
+
+          <div class="creatures-grid">
+            <article class="creature-card reveal">
+              <div class="creature-header">
+                <h3 class="creature-name">Flesher</h3>
+                <span class="creature-status">ZONA // UPSILON</span>
+              </div>
+              <p class="creature-desc">
+                Horror biomecânico que vagueia por áreas de geração de energia.
+                O corpo aparenta ser o resultado grotesco de uma tentativa
+                automatizada de "reparar" tecidos orgânicos com peças
+                industriais e gel estrutural.
+              </p>
+            </article>
+
+            <article class="creature-card reveal">
+              <div class="creature-header">
+                <h3 class="creature-name">Terry Akers</h3>
+                <span class="creature-status">ZONA // THETA</span>
+              </div>
+              <p class="creature-desc">
+                A infame "Figura" cega da estação residencial. Consumido por uma
+                obsessão com o gel da WAU, Akers persegue invasores através de
+                vibrações auditivas e estalos no metal. Correr ao redor dele é
+                fatal.
+              </p>
+            </article>
+
+            <article class="creature-card reveal">
+              <div class="creature-header">
+                <h3 class="creature-name">Proxies</h3>
+                <span class="creature-status">ZONA // PROFUNDAS</span>
+              </div>
+              <p class="creature-desc">
+                Enxames ágeis e desfigurados que patrulham laboratórios. O
+                apagamento de luzes artificiais e passos lentos são a única
+                salvaguarda para cruzar seu raio sensorial sem disparar alertas.
+              </p>
+            </article>
+
+            <article class="creature-card reveal">
+              <div class="creature-header">
+                <h3 class="creature-name">Iron Widow</h3>
+                <span class="creature-status">ZONA // OMICRON</span>
+              </div>
+              <p class="creature-desc">
+                Ameaça couraçada e massiva, meio caranguejo mecânico, meio
+                triturador hidráulico. O tremor de suas passadas reverbera na
+                carcaça da estação antes mesmo de seu vulto surgir na água.
+              </p>
+            </article>
+
+            <article class="creature-card reveal">
+              <div class="creature-header">
+                <h3 class="creature-name">O Juvenil</h3>
+                <span class="creature-status">ZONA // ABISSAL</span>
+              </div>
+              <p class="creature-desc">
+                Presença marinha errática e voraz nas fossas mais escuras.
+                Movimenta-se em velocidades assustadoras quando fareja
+                distúrbios elétricos ou lanternas acesas na planície oceânica.
+              </p>
+            </article>
+
+            <article class="creature-card reveal">
+              <div class="creature-header">
+                <h3 class="creature-name">Estruturas WAU</h3>
+                <span class="creature-status">COMPLEXO GLOBAL</span>
+              </div>
+              <p class="creature-desc">
+                Não se trata de uma besta isolada, mas da PATHOS-II inteira
+                convertida em um organismo parasitário vivo: tubulações que
+                sangram gel negro, flores de circuito e tentáculos mecânicos
+                pulsantes.
+              </p>
+            </article>
+          </div>
+
+          <div class="hazard-box reveal" style="margin-top: 2.5rem">
+            <div class="hazard-strip"></div>
+            <div
+              class="hazard-inner"
+              style="justify-content: center; text-align: center"
+            >
+              <span class="hazard-tag" style="margin-right: 0.6rem"
+                >ALERTA DE CONTENÇÃO</span
+              >
+              <span style="color: #f7e6ca"
+                >ENCONTROS SÃO FEITOS PARA SEREM EVITADOS // SOMA NÃO DÁ
+                MUNIÇÃO, DÁ CORAGEM.</span
+              >
+            </div>
+            <div class="hazard-strip"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 / TEMAS -->
+      <section class="abyss-section" id="temas">
+        <div class="marquee-container" aria-hidden="true">
+          <div class="marquee-content">
+            IDENTIDADE // CONSCIÊNCIA // HUMANIDADE // EXISTÊNCIA // IDENTIDADE
+            // CONSCIÊNCIA // HUMANIDADE // EXISTÊNCIA //
+          </div>
+        </div>
+
+        <div class="content-box">
+          <div class="reveal section-intro-scrim">
+            <span class="eyebrow section-index-badge">
+              <span class="hud-indicator"
+                ><span class="pulse-dot"></span><span class="hud-bar"></span
+              ></span>
+              07 // NÚCLEO FILOSÓFICO
+            </span>
+            <h2 class="section-title">O que nos torna humanos?</h2>
+            <p class="section-desc">
+              Mais do que sustos repentinos, SOMA permanece na memória como um
+              ensaio jogável sobre os limites éticos e sensoriais da existência.
+            </p>
+          </div>
+
+          <div class="themes-columns">
+            <div class="theme-col reveal">
+              <h3 class="theme-col-title">
+                <span
+                  style="
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid var(--border);
+                    padding: 0.2rem 0.6rem;
+                    border-radius: var(--radius-pill);
+                  "
+                  >[01]</span
+                >
+                Identidade
+              </h3>
+              <p>
+                O que realmente permanece intacto quando nossa autoimagem,
+                memórias e carcaça física deixam de coincidir? O jogo
+                desconstrói a noção de continuidade do "eu" ao forçar o jogador
+                a lidar com a duplicidade de consciências no vácuo das máquinas.
+              </p>
+            </div>
+
+            <div class="theme-col reveal">
+              <h3 class="theme-col-title">
+                <span
+                  style="
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid var(--border);
+                    padding: 0.2rem 0.6rem;
+                    border-radius: var(--radius-pill);
+                  "
+                  >[02]</span
+                >
+                Consciência
+              </h3>
+              <p>
+                SOMA pega o clássico "problema difícil da consciência" e o tira
+                dos livros didáticos para transformá-lo em uma experiência
+                interativa. Se um código simula com precisão a dor e o medo
+                humanos, em que momento ele merece ser respeitado como vida?
+              </p>
+            </div>
+
+            <div class="theme-col reveal">
+              <h3 class="theme-col-title">
+                <span
+                  style="
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid var(--border);
+                    padding: 0.2rem 0.6rem;
+                    border-radius: var(--radius-pill);
+                  "
+                  >[03]</span
+                >
+                Humanidade
+              </h3>
+              <p>
+                As perguntas mais perturbadoras da trama nunca surgem em
+                monólogos explicativos, mas sim nas decisões que o jogador é
+                obrigado a tomar para continuar avançando: puxar um cabo,
+                apertar um botão, apagar uma existência.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FECHAMENTO -->
+      <section class="closing-section">
+        <div class="closing-watermark">SOMA // AA</div>
+        <div class="closing-inner reveal">
+          <div style="margin-bottom: 1rem">
+            <span class="soma-wordmark" style="font-size: 1.8rem"
+              >S<span class="porthole-o"></span>MA</span
+            >
+          </div>
+          <div style="margin-bottom: 1.2rem">
+            <span class="eyebrow">FIM DA TRANSMISSÃO</span>
+          </div>
+          <h2
+            class="closing-title"
+            data-glitch="ALGUNS LUGARES FICAM COM VOCÊ."
+          >
+            Alguns lugares ficam com você.
+          </h2>
+          <a href="#inicio" class="btn-outline">VOLTAR AO INÍCIO ↑</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>PROJETO DE PORTFÓLIO // CONCEITO NÃO OFICIAL</div>
+        <div class="footer-disclaimer">
+          SOMA © FRICTIONAL GAMES (2015). TODOS OS DIREITOS RESERVADOS À
+          PRODUTORA ORIGINAL.
+        </div>
+        <div class="footer-credits">
+          Tipografia: Montserrat ExtraBold/Black + Asman (eroded, 100% free —
+          via dafont.com) + Courier Prime
+        </div>
+        <div class="footer-disclaimer">
+          Imagens © Frictional Games (Steam), SOMA Wiki (Fandom) — fan site sem
+          fins comerciais
+        </div>
+        <div style="color: #636d70; margin-top: 0.4rem">
+          ARQUIVO CONSTRUÍDO EM HTML &amp; CSS PUROS.
+        </div>
+      </div>
+    </footer>
+
+    <!-- System Shell JS -->
+
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
