@@ -1239,6 +1239,18 @@ p {
   transition: filter 0.3s ease;
 }
 
+.flesher-feature {
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.flesher-feature img {
+  width: min(100%, 560px);
+  max-height: 720px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
 .archive-media-box:hover img {
   filter: saturate(1) contrast(1.06);
 }
