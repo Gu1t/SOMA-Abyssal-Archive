@@ -1,6 +1,6 @@
 # SOMA // Abyssal Archive
 
-Website est?tico inspirado no universo do jogo SOMA, reorganizado em estrutura pronta para commit no GitHub.
+Website estático inspirado no universo do jogo SOMA
 
 ## Estrutura
 
@@ -19,6 +19,6 @@ python -m http.server 8000
 
 Depois acesse http://localhost:8000
 
-## Conte?do
+## Conteúdo
 
-A p?gina preserva a narrativa, as se??es de arquivo, curiosidades, hist?ria, ambienta??o, personagens, criaturas e temas. Os recursos visuais externos permanecem via CDN ou imagens p?blicas do pr?prio jogo.
+A página preserva a narrativa, as seções de arquivo, curiosidades, história, ambientação, personagens, criaturas e temas. Os recursos visuais externos permanecem via CDN ou imagens públicas do próprio jogo.
