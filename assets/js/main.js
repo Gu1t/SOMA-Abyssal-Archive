@@ -1,20 +1,77 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
+  const legacyMenuBtn = document.getElementById("menuToggle");
+  const legacyNav = document.getElementById("navLinks");
 
-  if (menuBtn && navLinks) {
-    menuBtn.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("is-open");
-      menuBtn.setAttribute("aria-expanded", isOpen);
-      menuBtn.textContent = isOpen ? "FECHAR //" : "MENU //";
+  if (legacyMenuBtn && legacyNav) {
+    legacyMenuBtn.addEventListener("click", () => {
+      const isOpen = legacyNav.classList.toggle("is-open");
+      legacyMenuBtn.setAttribute("aria-expanded", String(isOpen));
+      legacyMenuBtn.textContent = isOpen ? "FECHAR //" : "MENU //";
     });
 
-    navLinks.querySelectorAll("a").forEach((link) => {
+    legacyNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        navLinks.classList.remove("is-open");
-        menuBtn.setAttribute("aria-expanded", "false");
-        menuBtn.textContent = "MENU //";
+        legacyNav.classList.remove("is-open");
+        legacyMenuBtn.setAttribute("aria-expanded", "false");
+        legacyMenuBtn.textContent = "MENU //";
       });
+    });
+  }
+
+  const p2MenuBtn = document.getElementById("p2MenuToggle");
+  const p2Drawer = document.getElementById("p2TerminalDrawer");
+  const p2Links = document.querySelectorAll(".p2-nav-link, .p2-terminal-link");
+
+  const setActiveP2Link = (targetId) => {
+    p2Links.forEach((link) => {
+      const isActive = link.dataset.target === targetId;
+      link.classList.toggle("is-active", isActive);
+    });
+  };
+
+  if (p2MenuBtn && p2Drawer) {
+    const closeDrawer = () => {
+      p2Drawer.classList.remove("is-open");
+      p2Drawer.setAttribute("aria-hidden", "true");
+      p2MenuBtn.setAttribute("aria-expanded", "false");
+    };
+
+    const openDrawer = () => {
+      p2Drawer.classList.add("is-open");
+      p2Drawer.setAttribute("aria-hidden", "false");
+      p2MenuBtn.setAttribute("aria-expanded", "true");
+    };
+
+    p2MenuBtn.addEventListener("click", () => {
+      const isOpen = p2Drawer.classList.contains("is-open");
+      if (isOpen) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+
+    p2Links.forEach((link) => {
+      link.addEventListener("click", () => {
+        const target = link.dataset.target;
+        if (target) setActiveP2Link(target);
+        closeDrawer();
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Node)) return;
+
+      if (!p2Drawer.contains(target) && !p2MenuBtn.contains(target)) {
+        closeDrawer();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeDrawer();
+      }
     });
   }
 

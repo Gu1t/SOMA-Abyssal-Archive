@@ -26,48 +26,191 @@
     <div class="scanlines" aria-hidden="true"></div>
     <div class="noise-layer" aria-hidden="true"></div>
 
-    <!-- Header & Navegação Fixa -->
-    <header class="site-header">
-      <div class="nav-container">
-        <a
-          href="#inicio"
-          class="brand-link"
-          aria-label="SOMA Abyssal Archive Início"
-        >
-          <div class="brand-logo-wrap">
-            <span class="soma-wordmark"
-              >S<span class="porthole-o"></span>MA</span
+    <!-- BARRA DE SISTEMA PATHOS-II (Header Industrial) -->
+    <header class="site-header" role="banner">
+      <div class="header-boot-line" aria-hidden="true"></div>
+      <div class="p2-screw left" aria-hidden="true"></div>
+      <div class="p2-screw right" aria-hidden="true"></div>
+
+      <div class="p2-system-bar">
+        <div class="p2-brand-block">
+          <div
+            class="p2-brand-cell p2-cell"
+            title="Sistema Operacional PATHOS-II Conectado"
+          >
+            <div class="p2-sys-status">
+              <div class="p2-status-sq" aria-hidden="true">
+                <span class="p2-dot-pulse"></span>
+              </div>
+              <span class="p2-sys-label">SYS</span>
+            </div>
+          </div>
+
+          <div class="p2-brand-cell p2-cell">
+            <a
+              href="#inicio"
+              class="p2-brand-main"
+              aria-label="SOMA Abyssal Archive Início"
             >
-            <span class="brand-submark">// AA</span>
+              <div class="p2-wordmark-row">
+                <span class="p2-soma-text"
+                  >S<span class="p2-porthole-o" aria-hidden="true"></span
+                  >MA</span
+                >
+              </div>
+              <span class="p2-version-label">ABYSSAL ARCHIVE // v2.1</span>
+            </a>
           </div>
-          <div class="nav-status">
-            <span class="pulse-dot"></span>
-            <span>SINAL RECUPERADO // PATHOS-II</span>
+
+          <div class="p2-brand-cell p2-depth-cell p2-cell">
+            <div
+              class="p2-depth-chip"
+              title="Profundidade atual do complexo submerso"
+            >
+              DEPTH: 4,812m
+            </div>
           </div>
-        </a>
+        </div>
 
-        <button
-          class="mobile-menu-btn"
-          id="menuToggle"
-          aria-expanded="false"
-          aria-label="Alternar navegação"
-        >
-          MENU //
-        </button>
-
-        <nav aria-label="Navegação Principal">
-          <ul class="nav-links" id="navLinks">
-            <li><a href="#arquivo">01 Arquivo</a></li>
-            <li><a href="#curiosidades">02 Fatos</a></li>
-            <li><a href="#historia">03 História</a></li>
-            <li><a href="#ambientacao">04 Instalação</a></li>
-            <li><a href="#personagens">05 Sujeitos</a></li>
-            <li><a href="#criaturas">06 Ameaças</a></li>
-            <li><a href="#temas">07 Filosofia</a></li>
+        <nav class="p2-nav-block p2-cell" aria-label="Navegação do Sistema">
+          <ul class="p2-nav-list" id="p2NavList">
+            <li class="p2-nav-item">
+              <a href="#arquivo" class="p2-nav-link" data-target="arquivo">
+                <span class="p2-nav-pfx">01.</span
+                ><span class="p2-nav-txt">ARQUIVO</span>
+              </a>
+            </li>
+            <li class="p2-nav-sep" aria-hidden="true">/</li>
+            <li class="p2-nav-item">
+              <a
+                href="#ambientacao"
+                class="p2-nav-link"
+                data-target="ambientacao"
+              >
+                <span class="p2-nav-pfx">02.</span
+                ><span class="p2-nav-txt">ATMOSFERA</span>
+              </a>
+            </li>
+            <li class="p2-nav-sep" aria-hidden="true">/</li>
+            <li class="p2-nav-item">
+              <a href="#criaturas" class="p2-nav-link" data-target="criaturas">
+                <span class="p2-nav-pfx">03.</span
+                ><span class="p2-nav-txt">ENTIDADES</span>
+              </a>
+            </li>
+            <li class="p2-nav-sep" aria-hidden="true">/</li>
+            <li class="p2-nav-item">
+              <a href="#temas" class="p2-nav-link" data-target="temas">
+                <span class="p2-nav-pfx">04.</span
+                ><span class="p2-nav-txt">TEMAS</span>
+              </a>
+            </li>
           </ul>
         </nav>
+
+        <div class="p2-telemetry-block p2-cell">
+          <div class="p2-tele-cell">
+            <span class="p2-tele-o2"
+              ><span class="p2-tele-lbl">O₂</span>87%</span
+            >
+          </div>
+          <div class="p2-tele-cell">
+            <span class="p2-tele-signal">
+              SINAL:
+              <span class="p2-sig-bars"
+                >▮▮▮<span class="p2-sig-blink">▯</span></span
+              >
+            </span>
+          </div>
+          <div class="p2-tele-cell">
+            <a
+              href="#temas"
+              class="p2-fuse-btn"
+              title="Interruptor de Sobrecarga // Acessar Núcleo Filosófico"
+            >
+              <span class="p2-fuse-dot" aria-hidden="true"></span>
+              <span>FUSÍVEL</span>
+            </a>
+          </div>
+        </div>
+
+        <button
+          class="p2-mobile-toggle"
+          id="p2MenuToggle"
+          aria-expanded="false"
+          aria-label="Abrir Terminal de Navegação"
+        >
+          <span class="p2-radio-bars" aria-hidden="true">
+            <span class="p2-radio-bar b1"></span>
+            <span class="p2-radio-bar b2"></span>
+            <span class="p2-radio-bar b3"></span>
+          </span>
+          <span>SINAL</span>
+        </button>
       </div>
     </header>
+
+    <div
+      class="p2-terminal-drawer"
+      id="p2TerminalDrawer"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Terminal de Comandos"
+    >
+      <div class="p2-terminal-drawer-header">
+        <span>[ PATHOS-II // TERMINAL DE ACESSO REMOTO ]</span>
+        <span style="color: #d99e4a">CANAL SEGURO</span>
+      </div>
+
+      <ul class="p2-terminal-drawer-nav">
+        <li>
+          <a href="#arquivo" class="p2-terminal-link" data-target="arquivo">
+            <span class="p2-term-pfx">01.</span>
+            <span>ARQUIVO</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#ambientacao"
+            class="p2-terminal-link"
+            data-target="ambientacao"
+          >
+            <span class="p2-term-pfx">02.</span>
+            <span>ATMOSFERA</span>
+          </a>
+        </li>
+        <li>
+          <a href="#criaturas" class="p2-terminal-link" data-target="criaturas">
+            <span class="p2-term-pfx">03.</span>
+            <span>ENTIDADES</span>
+          </a>
+        </li>
+        <li>
+          <a href="#temas" class="p2-terminal-link" data-target="temas">
+            <span class="p2-term-pfx">04.</span>
+            <span>TEMAS</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="p2-terminal-drawer-footer">
+        <div class="p2-terminal-telemetry-row">
+          <span>O₂: 87% // CABINE ESTÁVEL</span>
+          <span style="color: #6fd8d4">PROFUNDIDADE: 4,812m</span>
+        </div>
+        <div class="p2-terminal-telemetry-row">
+          <span>ESTADO DA INSTALAÇÃO: ALERTA</span>
+          <a
+            href="#temas"
+            class="p2-fuse-btn"
+            style="padding: 4px 8px; font-size: 8px"
+          >
+            [FUSÍVEL ATIVO]
+          </a>
+        </div>
+        <div class="p2-wau-care">WAU // CUIDANDO DE VOCÊ_</div>
+      </div>
+    </div>
 
     <main>
       <!-- HERO SECTION -->
@@ -961,10 +1104,6 @@
         <div class="footer-disclaimer">
           SOMA © FRICTIONAL GAMES (2015). TODOS OS DIREITOS RESERVADOS À
           PRODUTORA ORIGINAL.
-        </div>
-        <div class="footer-credits">
-          Tipografia: Montserrat ExtraBold/Black + Asman (eroded, 100% free —
-          via dafont.com) + Courier Prime
         </div>
         <div class="footer-disclaimer">
           Imagens © Frictional Games (Steam), SOMA Wiki (Fandom) — fan site sem
