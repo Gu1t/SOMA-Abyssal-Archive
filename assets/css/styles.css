@@ -258,6 +258,10 @@ html {
   font-family: var(--font-body);
 }
 
+main > section {
+  scroll-margin-top: 64px;
+}
+
 h1 {
   font-family: var(--font-display);
   font-weight: 900;

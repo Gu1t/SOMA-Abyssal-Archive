@@ -75,6 +75,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const fuseButtons = document.querySelectorAll(".p2-fuse-btn");
+  const pageSections = Array.from(document.querySelectorAll("main section"));
+
+  if (fuseButtons.length && pageSections.length) {
+    const getCurrentSectionIndex = () => {
+      const headerHeight =
+        document.querySelector(".site-header")?.offsetHeight || 0;
+      const currentPosition = window.scrollY + headerHeight + 1;
+      let currentIndex = 0;
+
+      pageSections.forEach((section, index) => {
+        if (section.offsetTop <= currentPosition) {
+          currentIndex = index;
+        }
+      });
+
+      return currentIndex;
+    };
+
+    fuseButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const nextIndex =
+          (getCurrentSectionIndex() + 1) % pageSections.length;
+        pageSections[nextIndex].scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+  }
+
   const characters = [
     {
       id: "DOSSIÊ // SUJEITO 01",
