@@ -1,109 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const legacyMenuBtn = document.getElementById("menuToggle");
-  const legacyNav = document.getElementById("navLinks");
+  const menuBtn = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-  if (legacyMenuBtn && legacyNav) {
-    legacyMenuBtn.addEventListener("click", () => {
-      const isOpen = legacyNav.classList.toggle("is-open");
-      legacyMenuBtn.setAttribute("aria-expanded", String(isOpen));
-      legacyMenuBtn.textContent = isOpen ? "FECHAR //" : "MENU //";
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+      menuBtn.setAttribute("aria-expanded", isOpen);
+      menuBtn.textContent = isOpen ? "FECHAR //" : "MENU //";
     });
 
-    legacyNav.querySelectorAll("a").forEach((link) => {
+    navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        legacyNav.classList.remove("is-open");
-        legacyMenuBtn.setAttribute("aria-expanded", "false");
-        legacyMenuBtn.textContent = "MENU //";
-      });
-    });
-  }
-
-  const p2MenuBtn = document.getElementById("p2MenuToggle");
-  const p2Drawer = document.getElementById("p2TerminalDrawer");
-  const p2Links = document.querySelectorAll(".p2-nav-link, .p2-terminal-link");
-
-  const setActiveP2Link = (targetId) => {
-    p2Links.forEach((link) => {
-      const isActive = link.dataset.target === targetId;
-      link.classList.toggle("is-active", isActive);
-    });
-  };
-
-  if (p2MenuBtn && p2Drawer) {
-    const closeDrawer = () => {
-      p2Drawer.classList.remove("is-open");
-      p2Drawer.setAttribute("aria-hidden", "true");
-      p2MenuBtn.setAttribute("aria-expanded", "false");
-    };
-
-    const openDrawer = () => {
-      p2Drawer.classList.add("is-open");
-      p2Drawer.setAttribute("aria-hidden", "false");
-      p2MenuBtn.setAttribute("aria-expanded", "true");
-    };
-
-    p2MenuBtn.addEventListener("click", () => {
-      const isOpen = p2Drawer.classList.contains("is-open");
-      if (isOpen) {
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
-    });
-
-    p2Links.forEach((link) => {
-      link.addEventListener("click", () => {
-        const target = link.dataset.target;
-        if (target) setActiveP2Link(target);
-        closeDrawer();
-      });
-    });
-
-    document.addEventListener("click", (event) => {
-      const target = event.target;
-      if (!(target instanceof Node)) return;
-
-      if (!p2Drawer.contains(target) && !p2MenuBtn.contains(target)) {
-        closeDrawer();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeDrawer();
-      }
-    });
-  }
-
-  const fuseButtons = document.querySelectorAll(".p2-fuse-btn");
-  const pageSections = Array.from(document.querySelectorAll("main section"));
-
-  if (fuseButtons.length && pageSections.length) {
-    const getCurrentSectionIndex = () => {
-      const headerHeight =
-        document.querySelector(".site-header")?.offsetHeight || 0;
-      const currentPosition = window.scrollY + headerHeight + 1;
-      let currentIndex = 0;
-
-      pageSections.forEach((section, index) => {
-        if (section.offsetTop <= currentPosition) {
-          currentIndex = index;
-        }
-      });
-
-      return currentIndex;
-    };
-
-    fuseButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const nextIndex =
-          (getCurrentSectionIndex() + 1) % pageSections.length;
-        pageSections[nextIndex].scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        navLinks.classList.remove("is-open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "MENU //";
       });
     });
   }
