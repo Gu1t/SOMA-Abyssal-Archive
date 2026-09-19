@@ -1,23 +1,20 @@
 # SOMA // Abyssal Archive
 
-Website estático inspirado no universo do jogo SOMA
+Website interativo sobre o universo de SOMA, pronto para publicação como site
+estático no GitHub Pages ou em qualquer servidor web.
 
 ## Estrutura
 
-- index.html
-- assets/css/styles.css
-- assets/js/main.js
-- assets/fonts/
+- `index.html` — página completa e autocontida.
+- `assets/` — recursos legados mantidos no projeto.
+- `.gitignore` — arquivos locais que não devem ser versionados.
 
-## Como abrir
+## Vídeo
 
-Abra o arquivo index.html diretamente no navegador ou rode um servidor local simples:
-
-```bash
-python -m http.server 8000
-```
-
-Depois acesse http://localhost:8000
+O trailer é incorporado pelo player oficial do YouTube, com `allowfullscreen`,
+reprodução inline em dispositivos móveis e fallback para o próprio YouTube. O
+navegador precisa de acesso à internet para carregar o vídeo e os demais
+recursos externos.
 
 ## Conteúdo
 
