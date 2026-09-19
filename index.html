@@ -256,6 +256,25 @@
         font-family: var(--font-orbitron);
       }
 
+      @media (max-width: 900px) {
+        html {
+          scroll-snap-type: none;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        body {
+          touch-action: pan-y;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+          scroll-snap-type: none;
+        }
+      }
+
       body {
         margin: 0;
         padding: 0;
